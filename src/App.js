@@ -1,6 +1,6 @@
 // React (Frontend - src/App.js)
-import React, { useState } from 'react';
 import axios from 'axios';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const API_KEY = process.env.REACT_APP_WEATHER_API_KEY; // Store API key in .env.local
+  const API_KEY = process.env.REACT_APP_WEATHER_API_KEY || '26253c128a4ec8732b55d42f8952b96f'; // Store API key in .env.local
 
   const handleSearch = async () => {
     setLoading(true);
