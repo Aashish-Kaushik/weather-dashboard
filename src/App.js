@@ -16,10 +16,14 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const currentWeatherResponse = await axios.get(`/api/weather?city=${city}&apiKey=${API_KEY}`);
+      const currentWeatherResponse = await axios.get(
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
+      );
       setWeatherData(currentWeatherResponse.data);
 
-      const forecastResponse = await axios.get(`/api/forecast?city=${city}&apiKey=${API_KEY}`);
+      const forecastResponse = await axios.get(
+        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}&units=metric`
+      );
       setForecastData(forecastResponse.data);
     } catch (err) {
       setError(err.message || 'Failed to fetch weather data.');
