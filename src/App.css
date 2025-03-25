@@ -1,0 +1,52 @@
+/* src/App.css */
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.search-container button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.weather-info {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.forecast-container {
+  margin-top: 20px;
+}
+
+.forecast-day {
+  border: 1px solid #eee;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.forecast-items {
+  display: flex;
+  justify-content: space-around;
+}
+
+.forecast-item {
+  padding: 5px;
+}
+
+.error {
+  color: red;
+}
